@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	float pendapatan, jasa = 0, komisi = 0, total;
+	
+	cout << "Pendapatan	: ";
+	cin >> pendapatan;
+	
+	if (pendapatan >= 0 && pendapatan <= 200000)
+	{
+		jasa = 10000;
+		komisi = 0.1 * pendapatan;
+	}
+	else
+	{
+		if(pendapatan > 200000 && pendapatan <= 300000)
+		{
+			jasa = 20000;
+			komisi = 0.15 * pendapatan;
+		}
+		else
+		{
+			jasa = 30000;
+			komisi = 0.2 * pendapatan;
+		}		
+	}
+	total = pendapatan + komisi + jasa;
+	
+	cout << "\nUang Jasa	: " << jasa;
+	cout << "\nKomisi		: " << komisi;
+	cout << "\n========================== +";
+	cout << "\nHasil Total	: " << total;
+}
